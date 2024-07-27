@@ -1,0 +1,1032 @@
+    /* Reset CSS */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* General Styles */
+    body {
+        overflow-x:hidden;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #fff;
+        background-color: #000;
+    }
+    ::-webkit-scrollbar {
+        width: 12px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 50px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+    
+    
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    /* Navbar Styles */
+    .navbar {
+        background: #000;
+        color: #fff;
+        padding: 0.5rem;
+        border-bottom: 1px solid #333;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+
+    .logo img {
+        width: 80px; /* Adjust as needed */
+        height: auto;
+    }
+
+    .nav-container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+    .nav-extra, .nav-links {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-extra {
+        margin-bottom: 0.5rem;
+    }
+
+    .nav-extra a, .nav-links a {
+        font-size: 0.875rem;
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem;
+        position: relative;
+    }
+
+    .nav-links {
+        border-top: 1px solid #666;
+    }
+
+    .nav-links a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2.5px;
+        background: orange;
+        transition: width 0.45s;
+        bottom: -2px;
+        left: 0;
+    }
+
+    .nav-links a:hover::after, .nav-links .active::after {
+        width: 100%;
+    }
+
+    .nav-links li:not(:last-child)::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 120%;
+        background: #666;
+        position: absolute;
+        right: 0;
+        top: -50%;
+    }
+
+    /* Hero Section Styles */
+    .hero {
+        background: url('/medias/metal.png') no-repeat center center/cover;
+        height: 40vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .hero-overlay {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    /* Main Content Styles */
+    .main-content {
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .content-section {
+        margin-bottom: 2rem;
+        padding: 1.75rem;
+    }
+
+    .content-section h2 {
+        font-size: 3.75rem;
+        line-height: 1.2;
+    }
+
+    .content-section h3 {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .future-city {
+        background: url('/medias/futurecity.png') no-repeat center center/cover;
+        height: 55vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .future-city h3 {
+        font-size: 2rem;
+        color: #fff;
+    }
+    .page2 {
+        padding-top: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 5%;
+    } 
+    .We {
+        font-size: 1.5rem;
+    }
+    .content-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 5%;
+    }
+
+    .orderlist {
+        flex: 1;
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+        margin-right: 40px;
+    }
+
+    .orderlist li {
+        position: relative;
+        padding: 10px 0;
+    }
+
+    .orderlist li a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+        padding-left: 0px;
+    }
+
+    .orderlist li::before,
+    .orderlist li::after {
+        content: '';
+        position: absolute;
+        left: 0;
+    }
+
+    .orderlist li::before {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 10px;
+        height: 2px;
+        background-color: transparent;
+    }
+
+    .orderlist li::after {
+        bottom: -5px;
+        width: 100%;
+        height: 1px;
+        background-color: #fff;
+    }
+
+    .banner {
+        font-size: 1.5rem;
+        font-weight: bold;
+        position: relative;
+        padding-left: 20px; /* Create space for the line */
+        color: #fff;
+        margin: 0;
+        text-align: left; /* Align text to the right */
+    }
+
+    .banner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0; /* Position the line near the text */
+        width: 8px; /* Adjust thickness as needed */
+        height: 100%;
+        background-color: #fff;
+    }
+
+    /* Additional spacing between list and text */
+    .orderlist {
+        margin-right: 20px; /* Adjust space between the list and the additional text */
+    }
+
+    .content-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: 5%;
+    }
+
+    .content-container .orderlist {
+        flex: 1;
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .content-container .banner {
+        margin-left: 200px; /* Adjust space between the list and the additional text */
+    }
+    /* Style for the truck container */
+    .truck {
+        position: relative;
+        width: 100vw; /* Full viewport width */
+        height: auto; /* Adjust height to maintain aspect ratio */
+        overflow: hidden; /* Hide overflow if necessary */
+        display: flex;
+        justify-content: center; /* Center the image horizontally */
+    }
+    /* Style for the truck image */
+    .truck img {
+        width: 100%; /* Full width of   the container */
+        height: 800px; /* Maintain aspect ratio */
+        display: block; /* Remove extra space below the image */
+    }
+    .truck-overlay{
+        position: absolute; /* Absolute positioning relative to .truck */
+        top: 45%; /* Center vertically */
+        left: 80%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Offset to center the square */
+        width: 25%; /* Adjust width of the grey square */
+        height: 70%; /* Adjust height of the grey square */
+        background-color: rgba(66, 66, 66, 0.8); /* Semi-transparent grey */
+        display: flex;
+        justify-content: center; /* Center text horizontally */
+        align-items: center; /* Center text vertically */
+        color: #fff; /* White text color */
+        padding: 1rem; /* Padding around the text */
+        box-sizing: border-box; /* Include padding in the element's total width and height */
+        z-index: 2;
+    }
+    .truck-text{
+        font-size: 1.5  rem; /* Adjust text size as needed */
+        font-weight: bold; /* Make text bold */
+    }
+
+    /* Style for the bottom-left text */
+    .bottom-left-text {
+        position: absolute; /* Absolute positioning relative to .truck */
+        bottom: 100px; /* Adjust as needed */
+        left: 200px; /* Adjust as needed */
+        color: #fff; /* White text color */
+        line-height: 1;
+        font-size: 3rem; /* Adjust text size as needed */
+        font-weight: bold; /* Make text bold */
+        z-index: 2; /* Ensure text is above the image and overlay */
+    }
+
+    /* Style for the white line under the bottom-left text */
+    .bottom-left-text::after {
+        content: '';
+        display: block;
+        width: 100px; /* Adjust width as needed */
+        height: 15px; /* Adjust height as needed */
+        background-color: #fff; /* White color */
+        margin-top: 5px; /* Space between text and line */
+    }
+
+    .header{
+        font-size: 3.5rem;
+        padding-top: 7%;
+        font-weight: 600;
+    }
+    /* Header Overlay */
+    .header-overlay {
+        background-color: #444;
+        color: #fff;
+        width: 49%;
+        height: 70%;
+        padding: 2rem; /* Adjust padding as needed */
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        z-index: 1;
+    }
+
+    /* Related Images Container */
+    .related-images-container { 
+        display: flex;
+        justify-content: center;
+        gap: 1rem; /* Space between images */
+        margin-top: 15rem; /* Space above the images */
+        margin-left: 20rem;
+        flex-wrap: wrap;
+        position: absolute;
+        z-index: 2;
+    }
+
+    /* Related Images */
+    .related-image-item {
+        position: relative;
+        text-align: center;
+        margin-right: 1rem;
+        width: 400px; /* Adjust width as needed */
+        height: 300px; /* Adjust height as needed */
+        overflow: hidden;
+        box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+    }
+
+    .related-image {
+        width: 100%; /* Full width of the container */
+        height: 100%;
+        object-fit: cover;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: shadow effect */
+    }
+
+    .image-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(1, 1, 1, 0.7);
+        color: #fff;
+        padding: 0.5rem;
+        text-align: center;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        font-size: 1rem; /* Adjust font size */
+        line-height: 1.5rem; /* Adjust line height */
+    }
+    
+    .page4 {
+        margin-top: 40rem;
+        background-color: #000;
+        color: #fff;
+        padding: 3rem 6rem; /* Adjust padding for proper spacing */
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+        align-items: start;
+        font-family: Arial, sans-serif;
+    }
+    
+    .leftsidetext {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .page4 h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        line-height: 3rem;
+    }
+    
+    .description {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+        line-height: 1.5;
+    }
+    
+    .companylinks {
+        padding-left: 20%;
+        width: 75%;
+        height: 70%;
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+    
+    .linkimages {
+        background-color: #000;
+        color: #fff;
+        width: 500px;
+        height: 375px;
+        text-align: center;
+        flex: 1;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        border-radius: 5px;
+        border: 2px solid #fff;
+    }
+    .link-image-caption {
+        font-size: 0.7rem; /* Adjust font size as needed */
+        line-height: 1.5;
+        padding: 0 10px;
+        margin-top: 0.5rem;
+        text-align: left;
+    }
+    .linkimages img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .linkimages p {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+    
+    .navigation {
+        display: flex;
+        justify-content: start;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .navigation button {
+        background-color: #fff;
+        color: #000;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .navigation button:hover {
+        background-color: #ccc;
+    }
+    
+    .page5container {
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-top: 20%;
+    }
+    .page5background-image {
+        position: absolute;
+        top: 3%;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        z-index: -1;
+        opacity: 0.5;
+        background-image: url('/medias/building.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .page5title {
+        font-size: 4rem;
+        font-weight: bold;
+        position: relative;
+        top: -10rem;
+        left:10rem;
+    }
+    .page5content1{
+        display: flex;
+        align-items: center;
+        z-index: 1;
+    }
+    .page5content1 img {
+        width: 43%;
+        height: 70%;
+        margin-right: 20px;
+        padding-left: 5%;
+        margin-left: 5%;
+        margin-top: -100px;
+    }
+    .page5content2{
+        display: flex;
+        align-items: center;
+        z-index: 2;
+
+    }
+    .page5content2 img{
+        width: 20%;
+        height: 400px;
+        margin-left: 13%;
+        margin-top: -150px;
+    }
+    .page5text2-box {
+        color: #fff;
+        font-size: 1.5rem;
+        margin-top: 140px;
+        margin-left: 70px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .page5text2-box p {
+        top: 5px;
+        left: 40px;
+        line-height: 1;
+        margin: 0;
+    }
+    .page5text1-box{
+        position: absolute;
+        right: 350px;
+        background-color: #fff;
+        color: #000;
+        
+    }
+    .page5text1-box p {
+        margin: 30px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 50px;
+        padding-left: 20px;
+        line-height: 1;
+        
+        font-size: 4rem;
+        text-align: left;
+    }
+
+    .page5-textbox1 p::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 15px; /* Adjust the width of the line */
+        height: 100%; /* Adjust the height (thickness) of the line */
+        background-color: black; /* Line color */
+    }
+    .scroll-indicator {
+        margin-left: 220px;
+        padding-top: 30px;
+        text-align: left; /* Center the dots horizontally */
+        position: relative; /* Positioning context for dots */
+        margin-top: 20px; /* Space above the indicator */
+    }
+
+    .dot {
+        display: inline-block;
+        width: 15px; /* Dot size */
+        height: 15px; /* Dot size */
+        margin: 0 5px; /* Space between dots */
+        background-color: #ccc; /* Inactive dot color */
+        border-radius: 50%; /* Make dots circular */
+        transition: background-color 0.3s; /* Smooth color transition */
+    }
+
+    .dot.active {
+        background-color: #333; /* Active dot color */
+    }
+    .page6 {
+    position: relative;
+    }
+    .confetti {
+        position: relative;
+    }
+    .confetti-image img{
+        width: 100%;
+        height: 200px;
+        object-fit: fill;
+
+    }
+
+    .confetti-overlay {
+        position: absolute;
+        top: 50%; /* Center vertically */
+        left: 50%; /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust position to truly center */
+        color: #000; /* Text color */
+        text-align: center; /* Center align text */
+        padding: 1rem; /* Padding around the text */
+        background: rgba(0, 0, 0, 0); /* Optional: Background color with opacity */
+        border-radius: 10px; /* Optional: Rounded corners */
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        
+    }
+    .highlight{
+        font-size: 4rem;
+        font-weight: bold;
+        color: #0b0330;
+    }
+
+    .confetti-overlay p {
+        font-size: 3rem;
+    }
+    .contact-button{
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        font-weight: bold;
+        color: #000000;
+        background-color: transparent; /* Button color */
+        border: 2px solid #000000;
+        border-radius: 50px;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        transition: background-color 0.3s; color: 0.3s;
+    }
+
+    /* Hover effect for the Contact Us button */
+    .contact-button:hover {
+        background-color: #000; /* Button background color on hover */
+        color: #fff; /* Button text color on hover */
+    }
+    .page7 {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    /* Carousel Styles */
+    .sectors-carousel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .carousel-btn {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 10px;
+    }
+    
+    .sectors-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 400px; /* Set a fixed height to the container */
+    }
+    
+    .sector-card {
+        position: relative;
+        background-color: #222;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 20%; /* Adjust width to fit the container */
+        height: 350px;
+        margin: 0 10px;
+        transition: opacity 0.5s ease-in;
+    }
+    
+    .sector-card img {
+        width: 100%;
+        height: 100%; /* Make the image height 100% of the card height */
+        object-fit: cover; /* Make images cover the area without distortion */
+    }
+    
+    .sector-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        text-align: left;
+        background: rgba(68, 94, 179, 0.1); /* Semi-transparent background */
+        color: #fff; /* Ensures text color is visible on any image */
+    }
+    
+    .sector-info h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .sector-info p {
+        font-size: 1rem;
+    }
+    /* Footer main container styling */
+.footer {
+    margin-top: 30px;
+    background-color: #000;
+    padding: 20px 0;
+    width: 100%;
+    position: relative;
+}
+
+/* Container to center content and manage layout */
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Spread the content */
+    align-items: flex-start;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Logo section */
+.footer-logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    padding-right: 20px; /* Adjust padding-right to move the logo left/right */
+}
+
+/* Contact information section */
+.footer-contact {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding-right: 20px; /* Adjust padding-right to move the contact info left/right */
+}
+
+/* Adjust margin to prevent overlap with logo */
+.footer-contact p {
+    margin: 5px 0;
+    line-height: 2;
+    margin-left: -190px;
+    margin-right: -50px;
+    margin-top: 100px;
+    padding-left: 0; /* Adjust padding-left to move text left/right */
+}
+
+/* Logo styling */
+.footer-logo img.logo {
+    max-width: 50px;     /* Adjust max-width to change logo size */
+    margin-left: 50px;
+    margin-bottom: 20px; /* Adjust margin-bottom to move the text up/down */
+}
+
+/* Social icons styling */
+.social-icons {
+    display: flex;
+    margin-left: -85px;
+    margin-top: -34px; /* Adjust margin-top to move the social icons up/down */
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px; /* Adjust margin to control spacing between icons */
+    text-decoration: none;
+}
+
+/* Center section: about and contact links */
+.footer-list1 {
+    flex: 1;
+    margin-left: 30%; /* Adjust margin-left to move the entire center section left/right */
+}
+
+.footer-list1 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-list1 ul li {
+    margin: 5px 0; /* Adjust margin to control spacing between list items */
+}
+
+/* Right section: first list of information */
+.footer-list2 {
+    flex: 1;
+    margin-bottom: 30px;
+    margin-left: 50px; /* Adjust margin-left to move the entire right section left/right */
+}
+
+.footer-list2 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-list2 ul li {
+    margin: 5px 0; /* Adjust margin to control spacing between list items */
+}
+
+/* Right section: second list of information */
+.footer-list3 {
+    flex: 1;
+    margin-left: 50px; /* Adjust margin-left to move the entire right section left/right */
+}
+
+.footer-list3 ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-list3 ul li {
+    margin: 5px 0; /* Adjust margin to control spacing between list items */
+}
+
+/* Bottom section: copyright and footer links */
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px; /* Adjust padding-top to move the bottom section up/down */
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between; /* Spread the items across the container */
+    align-items: center; /* Vertically center the items */
+}
+
+/* Text margin adjustment in footer-bottom */
+.footer-bottom p {
+    margin: 0;
+    padding-left: 50px; /* Adjust padding-left to move the text left/right */
+}
+
+/* Footer links styling */
+.footer-links {
+    padding-right: 50px; /* Adjust padding-right to move the links left/right */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px; /* Adjust margin to control spacing between links */
+    text-decoration: none;
+}
+
+/* Hover effect for footer links */
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) { 
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-logo, .footer-contact, .footer-list1, .footer-list2, .footer-list3 {
+        margin-left: 0;
+    }
+
+    .footer-contact p {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-bottom p, .footer-links {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .footer-links {
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+    
+    
+
+    @media (max-width: 768px) { 
+        .content {
+            flex-direction: column;
+        }
+        .content img {
+            width: 100%;
+            margin: 0 0 20px 0;
+        }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .related-images-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .related-image-item {
+            width: 80%; /* Adjust width for small screens */
+            margin-bottom: 1rem; /* Space between images */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .related-image-item {
+            width: 90%; /* Adjust width for very small screens */
+        }
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .navbar .nav-links, .navbar .nav-extra {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .navbar .nav-links li, .navbar .nav-extra li {
+            margin: 0.5rem 0;
+        }
+
+        .navbar .logo {
+            max-width: 150px;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+        }
+
+        .content-section h3 {
+            font-size: 1.2rem;
+        }
+
+        .future-city {
+            height: 30vh;
+        }
+
+        .future-city h3 {
+            font-size: 1rem;
+        }
+
+        .content-container {
+            flex-direction: column;
+        }
+
+        .banner {
+            padding-left: 20px; /* Adjust for small screens if needed */
+            margin-bottom: 20px;
+        }
+
+        .banner::before {
+            left: 0; /* Adjust if needed for small screens */
+        }
+
+        .truck {
+            width: 100vw; /* Full viewport width */
+            height: auto; /* Adjust height to maintain aspect ratio */
+        }
+
+        .truck-overlay {
+            width: 60%; /* Adjust width for smaller screens */
+            height: 50%; /* Adjust height for smaller screens */
+        }
+
+        .related-images-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .related-image {
+            width: 80%; /* Adjust width for small screens */
+            margin-bottom: 1rem; /* Space between images */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .truck {
+            width: 100vw; /* Full viewport width */
+            height: auto; /* Adjust height to maintain aspect ratio */
+        }
+
+        .truck-overlay {
+            width: 80%; /* Adjust width for very small screens */
+            height: 40%; /* Adjust height for very small screens */
+        }
+    }
